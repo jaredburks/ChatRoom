@@ -14,3 +14,9 @@ C:\Users\Jared\Desktop\devCodeCamp 2017\Week 7\ChatroomStarter\ChatroomStarter\C
 C:\Users\Jared\Desktop\devCodeCamp 2017\Week 7\ChatroomStarter\ChatroomStarter\ChatroomStarter\ChatroomStarter\Server\obj\Debug\Server.pdb
 C:\Users\Jared\Desktop\devCodeCamp 2017\Week 7\ChatroomStarter\ChatroomStarter\ChatroomStarter\ChatroomStarter\Server\bin\Debug\Server.exe
 C:\Users\Jared\Desktop\devCodeCamp 2017\Week 7\ChatroomStarter\ChatroomStarter\ChatroomStarter\ChatroomStarter\Server\bin\Debug\Server.pdb
+C:\Users\Jared\Documents\Visual Studio 2015\Projects\ChatRoom\ChatroomStarter\ChatroomStarter\ChatroomStarter\ChatroomStarter\Server\bin\Debug\Server.exe.config
+C:\Users\Jared\Documents\Visual Studio 2015\Projects\ChatRoom\ChatroomStarter\ChatroomStarter\ChatroomStarter\ChatroomStarter\Server\obj\Debug\Server.exe
+C:\Users\Jared\Documents\Visual Studio 2015\Projects\ChatRoom\ChatroomStarter\ChatroomStarter\ChatroomStarter\ChatroomStarter\Server\obj\Debug\Server.pdb
+C:\Users\Jared\Documents\Visual Studio 2015\Projects\ChatRoom\ChatroomStarter\ChatroomStarter\ChatroomStarter\ChatroomStarter\Server\bin\Debug\Server.exe
+C:\Users\Jared\Documents\Visual Studio 2015\Projects\ChatRoom\ChatroomStarter\ChatroomStarter\ChatroomStarter\ChatroomStarter\Server\bin\Debug\Server.pdb
+C:\Users\Jared\Documents\Visual Studio 2015\Projects\ChatRoom\ChatroomStarter\ChatroomStarter\ChatroomStarter\ChatroomStarter\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
