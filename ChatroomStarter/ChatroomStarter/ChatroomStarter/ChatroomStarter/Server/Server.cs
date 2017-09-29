@@ -24,13 +24,16 @@ namespace Server
         {
             AcceptClient();
             //Thread acceptUser = new Thread(AcceptClient);
+            //Task<string> message = new Task<string>(client.Recieve);
+            //string text = await message;
             string message = client.Recieve();
             Respond(message);
+            //Respond(text);
         }
         private void AcceptClient()
         {
             TcpClient clientSocket = default(TcpClient);
-            Process.Start(@"C:\Users\Jared\Documents\Visual Studio 2015\Projects\ChatRoom\ChatroomStarter\ChatroomStarter\ChatroomStarter\ChatroomStarter\Client\bin\Debug\Client.exe");
+            //Process.Start(@"C:\Users\Jared\Documents\Visual Studio 2015\Projects\ChatRoom\ChatroomStarter\ChatroomStarter\ChatroomStarter\ChatroomStarter\Client\bin\Debug\Client.exe");
             clientSocket = server.AcceptTcpClient();
             //Console.WriteLine("Connected");
             NetworkStream stream = clientSocket.GetStream();

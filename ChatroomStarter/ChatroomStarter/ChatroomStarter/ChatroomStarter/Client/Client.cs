@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace Client
 {
@@ -29,6 +30,20 @@ namespace Client
             byte[] recievedMessage = new byte[256];
             stream.Read(recievedMessage, 0, recievedMessage.Length);
             UI.DisplayMessage(Encoding.ASCII.GetString(recievedMessage));
+        }
+        public void KeepSending()
+        {
+            while (true)
+            {
+                Send();
+            }
+        }
+        public void KeepReceiving()
+        {
+            while (true)
+            {
+                Recieve();
+            }
         }
     }
 }
