@@ -24,17 +24,14 @@ namespace Server
             member = new Dictionary<string, Client>();
             messages = new Queue<Message>();
         }
-        public async void Run()
+        public void Run()
         {
             //AcceptClient();
             Thread acceptClient = new Thread(KeepAcceptingClients);
             acceptClient.Start();
 
             //string message = client.Recieve();
-            Task<string> receiveMessage = new Task<string>(client.Recieve);
-            string message = await receiveMessage;
-
-            Respond(message);
+            //Respond(message);
         }
         private void AcceptClient()
         {
@@ -45,6 +42,7 @@ namespace Server
             client = new Client(stream, clientSocket);
             Console.WriteLine("Client " + " Connected");
             //member.Add(client.UserId, client);
+            Thread receive = new Thread(client.KeepReceiving);
         }
         public void KeepAcceptingClients()
         {
