@@ -31,6 +31,12 @@ namespace Server
             Console.WriteLine(recievedMessageString);
             return recievedMessageString;
         }
-
+        public void KeepReceiving()
+        {
+            while (true)
+            {
+                Recieve();
+            }
+        }
     }
 }

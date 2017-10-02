@@ -29,27 +29,28 @@ namespace Server
             //AcceptClient();
             Thread acceptClient = new Thread(KeepAcceptingClients);
             acceptClient.Start();
-            
+
+            //string message = client.Recieve();
             Task<string> receiveMessage = new Task<string>(client.Recieve);
             string message = await receiveMessage;
-            //string message = client.Recieve();
+
             Respond(message);
         }
         private void AcceptClient()
         {
             TcpClient clientSocket = default(TcpClient);
-            //Process.Start(@"C:\Users\Jared\Documents\Visual Studio 2015\Projects\ChatRoom\ChatroomStarter\ChatroomStarter\ChatroomStarter\ChatroomStarter\Client\bin\Debug\Client.exe");
             clientSocket = server.AcceptTcpClient();
             //Console.WriteLine("Connected");
             NetworkStream stream = clientSocket.GetStream();
             client = new Client(stream, clientSocket);
-            Console.WriteLine(client.UserId + " Connected");
+            Console.WriteLine("Client " + " Connected");
+            //member.Add(client.UserId, client);
         }
         public void KeepAcceptingClients()
         {
             while (true)
             {
-                AcceptClient();
+               AcceptClient();
             }
         }
         private void Respond(string body)
@@ -60,5 +61,7 @@ namespace Server
         {
 
         }
+        //Below is how to open a new Client window in code.
+        //Process.Start(@"C:\Users\Jared\Documents\Visual Studio 2015\Projects\ChatRoom\ChatroomStarter\ChatroomStarter\ChatroomStarter\ChatroomStarter\Client\bin\Debug\Client.exe");
     }
 }
